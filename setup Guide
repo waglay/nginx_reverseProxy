@@ -1,0 +1,17 @@
+Step 1: install nginx in your operating system
+Step 2: navigate to /etc/nginx/conf.d directory where the default nginx configuration is set up
+Step 3: create a new file under the current directory for reverse proxy configuration (eg reverseproxy.conf)
+Step 4: server{
+listen 80; #listens to all the ipv4 addresses
+listen [::]:80; #listens to all the ipv6 addresses
+
+server_name (your_domain or ip address); 
+location / {
+proxy_pass http://localhost:3000/;
+}
+}
+
+
+Step 5: Rename the default file inorder to disable it .
+Step 6: Now execute nginx -t command to reconfigure the setup configuration file.
+Step 7: Now reload the nginx service and you are good to go.
