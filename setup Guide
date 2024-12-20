@@ -15,3 +15,5 @@ proxy_pass http://localhost:3000/;
 Step 5: Rename the default file inorder to disable it .
 Step 6: Now execute nginx -t command to reconfigure the setup configuration file.
 Step 7: Now reload the nginx service and you are good to go.
+
+The results done in the VM is attached in the repo;
